@@ -7,6 +7,7 @@ const App = () => {
     { id: 1, name: "Comprar leche", done: false },
     { id: 2, name: "Sacar al perro", done: true },
     { id: 3, name: "Hacer ejercicio", done: false },
+    { id: 4, name: "Hacer ejercicio", done: true },
   ]);
 
   const handleAddTask = (newTask) => {
