@@ -10,6 +10,14 @@ const TaskList = ({ tasks, onAddTask, onDeleteTask, onToggleDone }) => {
     setNewTaskName("");
   };
 
+  const handleDeleteTask = (taskId) => {
+    onDeleteTask(taskId);
+  };
+
+  const handleToggleDone = (taskId) => {
+    onToggleDone(taskId);
+  };
+
   return (
     <div>
       <form onSubmit={handleAddTask}>
@@ -26,8 +34,8 @@ const TaskList = ({ tasks, onAddTask, onDeleteTask, onToggleDone }) => {
           <Task
             key={task.id}
             task={task}
-            onDeleteTask={onDeleteTask}
-            onToggleDone={onToggleDone}
+            onDeleteTask={handleDeleteTask}
+            onToggleDone={handleToggleDone}
           />
         ))}
       </ul>
